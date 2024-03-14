@@ -5,6 +5,8 @@
       <w-sheet class="mx-1" v-bind="{ color, width, height }" />
       <vv-sheet class="mx-1" />
     </v-container>
+
+    <span></span>
   </v-app>
 </template>
 
@@ -14,8 +16,12 @@ import VvSheet from './VvSheet.vue';
 import { color, width, height } from './config';
 </script>
 
-<style lang="scss">
-.v-application {
+<style scoped lang="scss">
+@import '@/scss/settings';
+
+span {
+  width: 200px;
+  height: 200px;
   background-color: $blue-custom !important;
 
   @media #{map-get($display-breakpoints, 'md-and-up')} {
